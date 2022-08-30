@@ -1,0 +1,59 @@
+$date
+	Tue Aug 30 19:54:53 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_simple_circuit $end
+$var wire 1 ! Y $end
+$var reg 1 " A $end
+$var reg 1 # B $end
+$var reg 1 $ C $end
+$scope module M1 $end
+$var wire 1 " A2 $end
+$var wire 1 # B2 $end
+$var wire 1 $ C2 $end
+$var wire 1 ! Y $end
+$var wire 1 % w1 $end
+$var wire 1 & w2 $end
+$var wire 1 ' w3 $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0'
+0&
+0%
+0$
+0#
+0"
+0!
+$end
+#20
+1$
+#40
+0$
+1#
+#60
+1!
+1&
+1%
+1$
+#80
+0%
+0$
+0#
+1"
+#100
+1$
+#120
+1'
+0$
+1#
+#140
+1%
+1$
