@@ -1,0 +1,108 @@
+#! /usr/bin/vvp
+:ivl_version "11.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x55580dca2f70 .scope module, "tb_simple_circuit" "tb_simple_circuit" 2 1;
+ .timescale 0 0;
+v0x55580dcca540_0 .var "A", 0 0;
+v0x55580dcca600_0 .var "B", 0 0;
+v0x55580dcca6a0_0 .var "C", 0 0;
+v0x55580dcca740_0 .net "Y", 0 0, L_0x55580dccaad0;  1 drivers
+S_0x55580dcb3a90 .scope module, "M1" "simple_circuit" 2 5, 3 1 0, S_0x55580dca2f70;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "A2";
+    .port_info 1 /INPUT 1 "B2";
+    .port_info 2 /INPUT 1 "C2";
+    .port_info 3 /OUTPUT 1 "Y";
+L_0x55580dcca810 .functor AND 1, v0x55580dcca6a0_0, v0x55580dcca600_0, C4<1>, C4<1>;
+L_0x55580dcca950 .functor OR 1, v0x55580dcca540_0, L_0x55580dcca810, C4<0>, C4<0>;
+L_0x55580dccaa60 .functor AND 1, v0x55580dcca600_0, v0x55580dcca540_0, C4<1>, C4<1>;
+L_0x55580dccaad0 .functor OR 1, L_0x55580dcca950, L_0x55580dccaa60, C4<0>, C4<0>;
+v0x55580dcb3ce0_0 .net "A2", 0 0, v0x55580dcca540_0;  1 drivers
+v0x55580dcca010_0 .net "B2", 0 0, v0x55580dcca600_0;  1 drivers
+v0x55580dcca0d0_0 .net "C2", 0 0, v0x55580dcca6a0_0;  1 drivers
+v0x55580dcca170_0 .net "Y", 0 0, L_0x55580dccaad0;  alias, 1 drivers
+v0x55580dcca230_0 .net "w1", 0 0, L_0x55580dcca810;  1 drivers
+v0x55580dcca340_0 .net "w2", 0 0, L_0x55580dcca950;  1 drivers
+v0x55580dcca400_0 .net "w3", 0 0, L_0x55580dccaa60;  1 drivers
+    .scope S_0x55580dca2f70;
+T_0 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x55580dcca540_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x55580dcca600_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x55580dcca6a0_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x55580dcca540_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x55580dcca600_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x55580dcca6a0_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x55580dcca540_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x55580dcca600_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x55580dcca6a0_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x55580dcca540_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x55580dcca600_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x55580dcca6a0_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x55580dcca540_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x55580dcca600_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x55580dcca6a0_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x55580dcca540_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x55580dcca600_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x55580dcca6a0_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x55580dcca540_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x55580dcca600_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x55580dcca6a0_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x55580dcca540_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x55580dcca600_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x55580dcca6a0_0, 0, 1;
+    %end;
+    .thread T_0;
+    .scope S_0x55580dca2f70;
+T_1 ;
+    %vpi_call 2 32 "$monitor", "A2=%b, B2=%b, C2=%b,Y=%b", v0x55580dcca540_0, v0x55580dcca600_0, v0x55580dcca6a0_0, v0x55580dcca740_0 {0 0 0};
+    %end;
+    .thread T_1;
+    .scope S_0x55580dca2f70;
+T_2 ;
+    %vpi_call 2 36 "$dumpfile", "circuit2.vcd" {0 0 0};
+    %vpi_call 2 37 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x55580dca2f70 {0 0 0};
+    %end;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "tb_circuit2.v";
+    "circuit2.v";
