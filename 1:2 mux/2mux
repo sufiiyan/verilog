@@ -1,0 +1,106 @@
+#! /usr/bin/vvp
+:ivl_version "11.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x55b81f567f90 .scope module, "mux_tb" "mux_tb" 2 1;
+ .timescale 0 0;
+v0x55b81f57e1a0_0 .var "t_a", 0 0;
+v0x55b81f57e260_0 .var "t_b", 0 0;
+v0x55b81f57e330_0 .net "t_o", 0 0, L_0x55b81f58e820;  1 drivers
+v0x55b81f57e430_0 .var "t_s", 0 0;
+S_0x55b81f568120 .scope module, "mux" "mux2" 2 5, 3 1 0, S_0x55b81f567f90;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "i0";
+    .port_info 1 /INPUT 1 "i1";
+    .port_info 2 /INPUT 1 "j";
+    .port_info 3 /OUTPUT 1 "o";
+v0x55b81f557a40_0 .net *"_ivl_0", 31 0, L_0x55b81f57e500;  1 drivers
+L_0x7fb53e86f018 .functor BUFT 1, C4<0000000000000000000000000000000>, C4<0>, C4<0>, C4<0>;
+v0x55b81f57db40_0 .net *"_ivl_3", 30 0, L_0x7fb53e86f018;  1 drivers
+L_0x7fb53e86f060 .functor BUFT 1, C4<00000000000000000000000000000000>, C4<0>, C4<0>, C4<0>;
+v0x55b81f57dc20_0 .net/2u *"_ivl_4", 31 0, L_0x7fb53e86f060;  1 drivers
+v0x55b81f57dd10_0 .net *"_ivl_6", 0 0, L_0x55b81f58e6b0;  1 drivers
+v0x55b81f57ddd0_0 .net "i0", 0 0, v0x55b81f57e1a0_0;  1 drivers
+v0x55b81f57dee0_0 .net "i1", 0 0, v0x55b81f57e260_0;  1 drivers
+v0x55b81f57dfa0_0 .net "j", 0 0, v0x55b81f57e430_0;  1 drivers
+v0x55b81f57e060_0 .net "o", 0 0, L_0x55b81f58e820;  alias, 1 drivers
+L_0x55b81f57e500 .concat [ 1 31 0 0], v0x55b81f57e430_0, L_0x7fb53e86f018;
+L_0x55b81f58e6b0 .cmp/eq 32, L_0x55b81f57e500, L_0x7fb53e86f060;
+L_0x55b81f58e820 .functor MUXZ 1, v0x55b81f57e260_0, v0x55b81f57e1a0_0, L_0x55b81f58e6b0, C4<>;
+    .scope S_0x55b81f567f90;
+T_0 ;
+    %vpi_call 2 7 "$dumpfile", "2mux.vcd" {0 0 0};
+    %vpi_call 2 8 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x55b81f567f90 {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_0x55b81f567f90;
+T_1 ;
+    %vpi_call 2 11 "$monitor", v0x55b81f57e1a0_0, v0x55b81f57e260_0, v0x55b81f57e430_0, v0x55b81f57e330_0 {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x55b81f57e1a0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x55b81f57e260_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x55b81f57e430_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x55b81f57e1a0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x55b81f57e260_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x55b81f57e430_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x55b81f57e1a0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x55b81f57e260_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x55b81f57e430_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x55b81f57e1a0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x55b81f57e260_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x55b81f57e430_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x55b81f57e1a0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x55b81f57e260_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x55b81f57e430_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x55b81f57e1a0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x55b81f57e260_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x55b81f57e430_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x55b81f57e1a0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x55b81f57e260_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x55b81f57e430_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x55b81f57e1a0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x55b81f57e260_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x55b81f57e430_0, 0, 1;
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "2mux_tb.v";
+    "2mux.v";
