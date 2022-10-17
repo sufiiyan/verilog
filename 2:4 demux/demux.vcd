@@ -1,0 +1,43 @@
+$date
+	Sun Sep 18 19:27:26 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module Demultiplexer_1_to_4_case_tb $end
+$var wire 4 ! Y [3:0] $end
+$var reg 2 " A [1:0] $end
+$var reg 1 # din $end
+$scope module I0 $end
+$var wire 2 $ A [1:0] $end
+$var wire 1 # din $end
+$var reg 4 % Y [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b1 %
+b0 $
+1#
+b0 "
+b1 !
+$end
+#1
+b10 !
+b10 %
+b1 "
+b1 $
+#2
+b100 !
+b100 %
+b10 "
+b10 $
+#3
+b1000 !
+b1000 %
+b11 "
+b11 $
